@@ -1,0 +1,18 @@
+﻿<Window x:Class="EjerciciosS3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjerciciosS3"
+        mc:Ignorable="d"
+        Title="RadioYCheck" Height="450" Width="800">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="29,37,0,0" Stroke="Black" VerticalAlignment="Top" Width="539"/>
+        <Label Content="Control CheckBox" HorizontalAlignment="Left" Margin="29,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,-0.114"/>
+        <CheckBox x:Name="cbTipoLetra" Content="Cambiar Tipo de Letra" HorizontalAlignment="Left" Margin="50,56,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbColorTexto" Content="Cambiar Color de Texto" HorizontalAlignment="Left" Margin="50,76,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbColorFondo" Content="Cambiar Color de Fondo" HorizontalAlignment="Left" Margin="51,96,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAplicar" Content="Aplicar" HorizontalAlignment="Left" Margin="399,44,0,0" VerticalAlignment="Top" Click="btnAplicar_Click" RenderTransformOrigin="0.495,0.754"/>
+        <Label x:Name="lbTexto" Content="Uso de Control CheckBox" HorizontalAlignment="Left" Margin="298,78,0,0" VerticalAlignment="Top" Width="242" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </Grid>
+</Window>
