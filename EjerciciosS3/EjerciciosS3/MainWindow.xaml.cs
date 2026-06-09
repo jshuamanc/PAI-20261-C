@@ -38,5 +38,23 @@ namespace EjerciciosS3
                 lbTexto.Background = Brushes.Aqua;
             }
         }
+
+        private void btnAplicarRadio_Click(object sender, RoutedEventArgs e)
+        {
+            lbTextoRadio.FontFamily = new FontFamily("Segoe UI");
+            lbTextoRadio.Foreground = Brushes.Black;
+            lbTextoRadio.Background = Brushes.Transparent;
+
+            if(rbTipoLetra.IsChecked == true) 
+            {
+                lbTextoRadio.FontFamily = new FontFamily("Times New Roman");
+            }else if (rbColorTexto.IsChecked == true)
+            {
+                lbTextoRadio.Foreground = Brushes.Red;
+            }else if(rbColorFondo.IsChecked == true)
+            {
+                lbTextoRadio.Background = Brushes.Yellow;
+            }
+        }
     }
 }
