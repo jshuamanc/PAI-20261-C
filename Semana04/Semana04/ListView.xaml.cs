@@ -27,6 +27,25 @@ namespace Semana04
 
             lvAlumnos.ItemsSource = alumnos;
         }
-    
+
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            Alumno nuevo = new Alumno(
+                txtNombre.Text,
+                txtApellidos.Text,
+                Int32.Parse(txtEdad.Text)
+                );
+            alumnos.Add(nuevo);
+            lvAlumnos.ItemsSource = null;
+            lvAlumnos.ItemsSource = alumnos;
+
+        }
+
+        private void btnMostrar_Click(object sender, RoutedEventArgs e)
+        {
+            Alumno alumno = (Alumno)lvAlumnos.SelectedItem;
+
+            MessageBox.Show($"Alumno Seleccionado: {alumno.Nombres} {alumno.Apellidos} de {alumno.Edad} años");
+        }
     }
 }
