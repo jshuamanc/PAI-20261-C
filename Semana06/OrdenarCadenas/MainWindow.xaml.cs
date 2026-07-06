@@ -16,6 +16,7 @@ namespace OrdenarCadenas
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string[] arrayNombres;
         public MainWindow()
         {
             InitializeComponent();
@@ -23,6 +24,38 @@ namespace OrdenarCadenas
 
         private void btnListar_Click(object sender, RoutedEventArgs e)
         {
+            string textOrigen = txtCadenaInicial.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(textOrigen))
+            {
+                MessageBox.Show("La cadena de nombres esta vacía", 
+                    "Validar", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            arrayNombres = textOrigen.Split(' ');
+            lbNombres.Items.Clear();
+            foreach (string nombre in arrayNombres)
+            {
+                lbNombres.Items.Add(nombre);
+            }
+
+            txtCantidadNombres.Text = lbNombres.Items.Count.ToString();
+
+        }
+
+        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        {
+            string filtro = txtLetra.Text;
+            lbFiltrado.Items.Clear();
+            foreach (string nombre in arrayNombres)
+            {
+                if (nombre.StartsWith(filtro,StringComparison.OrdinalIgnoreCase))
+                {
+                    lbFiltrado.Items.Add(nombre);
+                }
+            }
+            txtCantidadFiltrado.Text = lbFiltrado.Items.Count.ToString();
 
         }
     }
