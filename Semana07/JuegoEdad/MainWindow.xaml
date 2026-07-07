@@ -27,7 +27,7 @@
             <TextBox x:Name="txtMaximo" Grid.Column="2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" FontSize="14"/>
         </Grid>
         <TextBox x:Name="txtEdad" Grid.Row="4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" FontSize="14"/>
-        <Button x:Name="btnPrimerIntento" Grid.Row="2" Content="Primer Intento" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnPrimerIntento" Grid.Row="2" Content="Primer Intento" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnPrimerIntento_Click"/>
         <TextBlock Grid.Row="3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="La computadora piensa que tu edad es:" VerticalAlignment="Center" FontWeight="Bold" FontSize="13"/>
         <Grid Grid.Row="5" Margin="0,0,0,0">
             <Grid.ColumnDefinitions>
@@ -35,8 +35,8 @@
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnCorrecto" Grid.Column="0" Content="Correcto" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <Button x:Name="btnIncorrecto" Grid.Column="2" Content="Incorrecto" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnCorrecto" Grid.Column="0" Content="Correcto" HorizontalAlignment="Right" VerticalAlignment="Center" Click="btnCorrecto_Click"/>
+            <Button x:Name="btnIncorrecto" Grid.Column="2" Content="Incorrecto" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnIncorrecto_Click"/>
    
         </Grid>
     </Grid>
