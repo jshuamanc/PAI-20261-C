@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="CentroOdontologico/CentroOdontologico.csproj" Id="1a68092f-2f54-4b13-a391-8c197c4ce0b5" />
+  <Project Path="EncriptarClave/EncriptarClave.csproj" Id="47a1dc65-1354-4ea2-9e6b-0243a451cce6" />
   <Project Path="Fechas/Fechas.csproj" />
   <Project Path="OrdenarCadenas/OrdenarCadenas.csproj" Id="28bafd60-9ab0-499b-b800-da881e21b379" />
 </Solution>
