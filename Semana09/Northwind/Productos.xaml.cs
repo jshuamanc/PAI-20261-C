@@ -28,24 +28,26 @@ namespace Northwind
         public Productos()
         {
             InitializeComponent();
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             string query = "select ProductID, ProductName, UnitPrice, UnitsInStock, Discontinued  from Products";
-            using(SqlConnection con = new SqlConnection(cadenaConexion))
-            {
+            SqlConnection con = new SqlConnection(cadenaConexion);
+            
                 da = new SqlDataAdapter(query, con);
                 dt = new DataTable();
 
                 da.Fill(dt);
 
                 dgProductos.ItemsSource = dt.DefaultView;
-            }
+            
         }
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
+            
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
 
             int filasAfectadas = da.Update(dt);

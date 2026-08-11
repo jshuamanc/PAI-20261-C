@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Dock/Dock.csproj" />
+  <Project Path="FormulariosMDI/FormulariosMDI.csproj" />
+</Solution>
