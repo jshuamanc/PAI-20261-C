@@ -8,5 +8,6 @@ namespace EjemploMVVM.Repositories
     public interface IProductoRepository
     {
         public List<Producto> ObtenerTodos();
+        public List<Producto> BuscarPorNombre(string nombre);
     }
 }

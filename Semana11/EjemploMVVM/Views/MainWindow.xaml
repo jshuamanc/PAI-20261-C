@@ -8,10 +8,15 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="30">
         <Grid.RowDefinitions>
-            <RowDefinition Height="23*"/>
-            <RowDefinition Height="194*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button Content="Cargar Productos" Margin="0,0,0,10" Command="{Binding CargarProductosCommand}" />
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+            <TextBlock Text="Buscar:" Margin="0,0,10,0" VerticalAlignment="Center" />
+            <TextBox Width="250" Height="19" Margin="0,0,10,0" Text="{Binding textoBuscar}" />
+            <Button Content="Cargar Productos" Margin="0,0,0,0" Command="{Binding CargarProductosCommand}" VerticalAlignment="Center" />
+        </StackPanel>
+        
         <DataGrid Grid.Row="1" ItemsSource="{Binding productos}" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" Header="ID" Width="100"/>
